@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --color-bg: #2C2C32;
+    --color-bg-hover: #0f7dc6;
+    --color-active: red;
+    --color-active-custom: #6464ff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background-color: var(--color-bg);
+    padding: 2rem 0;
+    text-align: center;
+}
+header > a {
+    color: white;
+    text-decoration: none;
+    padding: 0 1rem;
+}
+header > a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+main {
+    min-height: calc(100vh - 85px - 22px);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* вешается сам на выбранный NavLink */
+.active {
+    color: var(--color-active);
+    cursor: pointer;
+}
+
+/* кастомный класс для выбранного NavLink */
+.active-link {
+    color: var(--color-active-custom);
+    cursor: pointer;
 }
