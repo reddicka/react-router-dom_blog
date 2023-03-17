@@ -4,7 +4,10 @@ import {Link, useMatch} from "react-router-dom";
 export const CustomLink = ({children, to, ...props}) => {
     // проверяет, совпадает ли переданное значение настоящему пути
     // можно передать объект
-    const match = useMatch(to)
+    const match = useMatch({
+        path: to,
+        end: to.length === 1
+    })
     // вернет либо null, либо какой-то объект
     console.log({match})
 

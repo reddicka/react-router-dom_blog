@@ -24,7 +24,10 @@ export const App = () => {
 
                     <Route path='/login' element={<LoginPage/>}/>
 
-                    <Route path='about' element={<AboutPage/>}/>
+                    <Route path='about' element={<AboutPage/>}>
+                        <Route path='contacts' element={<p>Our contacts</p>}/>
+                        <Route path='team' element={<p>Our team</p>}/>
+                    </Route>
                     {/* автоматический переход без сохранения в истории */}
                     <Route path='about-us' element={<Navigate to='/about' replace/>}/>
 
